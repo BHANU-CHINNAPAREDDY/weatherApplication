@@ -15,7 +15,8 @@ const Weather = () => {
   async function fetchWeatherData(param) {
     try {
       //console.log(param);
-      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${param}&appid=537602a5d64180cc5abc22415be5e0d0`;
+      const apikey="Enter Your API Key";
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${param}&appid=${apikey}`;
       const response = await fetch(apiUrl);
       const data = await response.json();
       //console.log(data);
